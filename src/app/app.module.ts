@@ -1,7 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {MatButtonModule, MatCheckboxModule} from '@angular/material';
-
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -9,9 +7,7 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule,
-    MatButtonModule,
-    MatCheckboxModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]
