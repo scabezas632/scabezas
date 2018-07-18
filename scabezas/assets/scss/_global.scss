@@ -1,0 +1,62 @@
+// Global styling for this template
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    @include body-font;
+}
+
+a {
+    color: $theme-primary;
+    @include transition-all;
+    &:hover,
+    &:focus {
+        color: darken($theme-primary, 10%);
+    }
+}
+
+hr {
+    max-width: 6.25rem;
+    margin: 1.5625rem auto 0;
+    border-width: 0.0625rem;
+    border-color: fade-out($gray-darker, .9);
+}
+
+hr.light {
+    border-color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @include heading-font;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;
+}
+
+section {
+    padding: 3.75rem 0;
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+@include tablet {
+    p {
+        font-size: 1.125rem
+    }
+    section h2 {
+        font-size: 3.125rem;
+    }
+    footer h2 {}
+}

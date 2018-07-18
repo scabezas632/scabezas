@@ -1,0 +1,133 @@
+// Mixins
+@mixin transition-all() {
+    -webkit-transition: all .35s;
+    -moz-transition: all .35s;
+    transition: all .35s;
+}
+
+@mixin background-cover() {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+@mixin button-variant($color, $background, $border) {
+    color: $color;
+    border-color: $border;
+    background-color: $background;
+    &:focus,
+    &.focus {
+        color: $color;
+        border-color: darken($border, 25%);
+        background-color: darken($background, 10%);
+    }
+    &:hover {
+        color: $color;
+        border-color: darken($border, 12%);
+        background-color: darken($background, 10%);
+    }
+    &:active,
+    &.active,
+    .open>&.dropdown-toggle {
+        color: $color;
+        border-color: darken($border, 12%);
+        background-color: darken($background, 10%);
+        &:hover,
+        &:focus,
+        &.focus {
+            color: $color;
+            border-color: darken($border, 25%);
+            background-color: darken($background, 17%);
+        }
+    }
+    &:active,
+    &.active,
+    .open>&.dropdown-toggle {
+        background-image: none;
+    }
+    &.disabled,
+    &[disabled],
+    fieldset[disabled] & {
+        &:hover,
+        &:focus,
+        &.focus {
+            border-color: $border;
+            background-color: $background;
+        }
+    }
+    .badge {
+        color: $background;
+        background-color: $color;
+    }
+}
+
+@mixin heading-font {
+    font-family: 'Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+    font-weight: 100;
+    letter-spacing: 0.0625rem;
+}
+
+@mixin body-font {
+    font-family: 'Muli', 'Helvetica', 'Arial', 'sans-serif';
+}
+
+@mixin alt-font {
+    font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+}
+
+// Box-sizing
+@mixin box-sizing( $box-model) {
+    box-sizing: $box-model;
+}
+
+// Para telefono en ambas orientaciones
+@mixin phone() {
+    @media only screen and (min-width: $phone-min-width) and (max-height: $phone-max-height) {
+        @content;
+    }
+}
+
+// Para telefono en vertical
+@mixin phone-portrait() {
+    @media only screen and (min-width: $phone-min-width) and (max-width: $phone-max-width) and (orientation: portrait) {
+        @content;
+    }
+}
+
+// Para telefono en horizontal
+@mixin phone-landscape() {
+    @media only screen and (min-height: $phone-min-height) and (max-height: $phone-max-height) and (orientation: landscape) {
+        @content;
+    }
+}
+
+// Para tablet en ambas orientaciones
+@mixin tablet() {
+    @media only screen and (min-width: $tablet-min-width) and (max-height: $tablet-max-height) {
+        @content;
+    }
+}
+
+// Para tablet en vertical
+@mixin tablet-portrait() {
+    @media only screen and (min-width: $tablet-min-width) and (max-width: $tablet-max-width) and (orientation: portrait) {
+        @content;
+    }
+}
+
+// Para tablet en horizontal
+@mixin tablet-landscape() {
+    @media only screen and (min-height: $tablet-min-height) and (max-height: $tablet-max-height) and (orientation: landscape) {
+        @content;
+    }
+}
+
+// Para escritorio
+@mixin desktop() {
+    @media only screen and (min-width: $desktop-min-width) {
+        @content;
+    }
+}

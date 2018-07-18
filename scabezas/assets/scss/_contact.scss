@@ -1,0 +1,80 @@
+//========================================
+//==== ESTILOS DE LA SECCION CONTACT =====
+//========================================
+footer {
+    background-color: #292c2f;
+    box-sizing: border-box;
+    width: 100%;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+    .contact-heading {
+        margin-bottom: 15px;
+        h2 {
+            margin-top: 0;
+            color: white;
+        }
+        hr {
+            border-color: fade-out($gray-light, .5);
+        }
+        p {
+            margin-bottom: 0;
+        }
+    }
+    .contenedor-principal {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 2rem;
+        text-align: center;
+    }
+    .contenedor-principal i {
+        background-color: #33383b;
+        color: #ffffff;
+        font-size: 1.3rem;
+        width: 2.3rem;
+        height: 2.3rem;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 2.6rem;
+        margin: 0.7rem 1rem;
+        vertical-align: middle;
+    }
+    .contenedor-principal .mail i.fa-envelope {
+        font-size: 1rem;
+        line-height: 2.3rem;
+    }
+    .contenedor-principal p {
+        display: inline-block;
+        color: #ffffff;
+        vertical-align: middle;
+        margin: 0;
+    }
+    .contenedor-principal p a {
+        color: $theme-primary;
+        text-decoration: none;
+    }
+    .phone {
+        flex: 0 1 100%;
+    }
+    .mail {
+        flex: 0 1 100%;
+    }
+    @include tablet {
+        .contenido p {
+            text-align: center;
+        }
+    }
+    @include desktop {
+        .contenedor-principal {
+            justify-content: space-between;
+        }
+        .phone {
+            flex: 0 1 45%;
+        }
+        .mail {
+            flex: 0 1 45%;
+        }
+    }
+}
