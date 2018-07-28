@@ -26,19 +26,14 @@ header.masthead {
     @keyframes fadeIn {
         0% {
             opacity: 0;
-            transform: translateY(50px);
-        }
-        30% {
-            opacity: 0;
         }
         100% {
             opacity: 1;
-            transform: translateY(0);
         }
     }
-    .animation {
-        opacity: 0;
-        animation: fadeIn 1.8s forwards;
+    .fadeIn {
+        -webkit-animation-name: fadeIn;
+        animation-name: fadeIn;
     }
     @media (min-width: 992px) {
         height: 100vh;
