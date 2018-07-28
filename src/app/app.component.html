@@ -42,7 +42,8 @@
         <div class="row h-100">
             <div class="col-lg-7 my-auto">
                 <div class="header-content mx-auto">
-                    <h1 class="mb-5">Desarrollador {{ headerTitle }}</h1>
+                    <h1 id="titulo" *ngIf="headerSwitch" class="mb-5" data-aos="zoom-in" data-aos-duration="1500">Desarrollador FrontEnd Web y Móvil</h1>
+                    <h1 id="titulo" *ngIf="!headerSwitch" class="mb-5" data-aos="zoom-in" data-aos-duration="1500">Desarrollador BackEnd con NodeJS y MongoDB</h1>
                     <a href="#about" class="btn btn-outline btn-xl btn-left">¡Conóceme!</a>
                     <a href="https://drive.google.com/uc?export=download&id=1EDSue5ihYgxlHU8Hh7Fikkjw86JwdzTg" class="btn btn-outline btn-xl btn-right">¡Descarga mi CV!</a>
                 </div>
@@ -62,7 +63,7 @@
             <hr>
         </div>
         <div class="contenedor-principal">
-            <div class="foto">
+            <div class="foto" data-aos="flip-left" data-aos-duration="1000">
                 <div class="avatar">
                     <img src="assets/img/foto.jpg" alt="" class="avatar">
                 </div>
@@ -70,7 +71,7 @@
             <div class="contenido">
                 <h3>Soy Samuel Cabezas</h3>
 
-                <p>Me considero un apasionado por el desarrollo Front-End, en el cuál dedico mi tiempo libre, aumentando mis conocimientos en Angular, Ionic 2+ y CSS3.</p>
+                <p>Me considero un apasionado por el desarrollo Front-End, en el cuál dedico mi tiempo libre, ampliando mis conocimientos en Angular, Ionic 2+ y CSS3.</p>
                 <p>Entre mis hobbies están ir al gimnasio y jugar videojuegos.</p>
             </div>
         </div>
@@ -88,35 +89,35 @@
             <hr>
         </div>
         <div class="contenedor-principal">
-            <div class="contenedor-card">
+            <div class="contenedor-card" data-aos="fade-up" data-aos-duration="1000">
                 <img src="assets/img/angular-logo.png">
                 <div class="info">
                     <h3>Angular</h3>
                     <p class="descripcion">Desarrollo web mediante Angular Framework.</p>
                 </div>
             </div>
-            <div class="contenedor-card">
+            <div class="contenedor-card" data-aos="fade-up" data-aos-duration="1000">
                 <img src="assets/img/ionic-logo.png">
                 <div class="info">
                     <h3>Ionic</h3>
                     <p class="descripcion">Desarrollo móvil hibrido mediante Ionic Framework.</p>
                 </div>
             </div>
-            <div class="contenedor-card">
+            <div class="contenedor-card" data-aos="fade-up" data-aos-duration="1000">
                 <img src="assets/img/html-css-logo.png">
                 <div class="info">
                     <h3>Diseño</h3>
                     <p class="descripcion">Diseño web/movil mediante CSS y/o Bootstrap.</p>
                 </div>
             </div>
-            <div class="contenedor-card">
+            <div class="contenedor-card" data-aos="fade-up" data-aos-duration="1000">
                 <img src="assets/img/nodejs-logo.png">
                 <div class="info">
                     <h3>NodeJS</h3>
                     <p class="descripcion">Desarrollo de Back-End mediante NodeJS y Express.</p>
                 </div>
             </div>
-            <div class="contenedor-card">
+            <div class="contenedor-card" data-aos="fade-up" data-aos-duration="1000">
                 <img src="assets/img/db-logo.png">
                 <div class="info">
                     <h3>Base de Datos</h3>

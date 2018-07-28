@@ -1,4 +1,5 @@
 import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -8,22 +9,19 @@ import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
 export class AppComponent implements OnInit {
   title = 'SCABEZAS';
 
-  headerTitle = ' FrontEnd Web y Móvil';
   headerSwitch = true;
 
   constructor(private myElement: ElementRef) {
   }
 
   ngOnInit() {
+    // Inicia la libreria de animacion por scroll
+    AOS.init();
+
     // Cambio de titulo
     setInterval(() => {
-      if ( this.headerSwitch === false ) {
-        this.headerTitle = ' FrontEnd Web y Móvil';
-      } else {
-        this.headerTitle = ' BackEnd con NodeJS y MongoDB';
-      }
       this.headerSwitch = !this.headerSwitch;
-    }, 3000);
+    }, 4000);
 
     // Scroll automatico
     document.getElementById('navbar-top').onclick = function() {
